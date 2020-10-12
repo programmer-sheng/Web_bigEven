@@ -38,13 +38,14 @@ $(() => {
       },
       url: "/api/reguser",
       success: (res) => {
-        console.log(res);
+        // console.log(res);
         if (res.status !== 0) {
           return layer.msg(res.message || "注册失败");
         }
         layer.msg("注册成功,请登录");
         $("#link_login").click();
       },
+
     });
   });
   //登录功能
