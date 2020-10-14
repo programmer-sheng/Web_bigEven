@@ -48,7 +48,11 @@ $(() => {
           return layer.msg("更换头像失败！");
         }
         layer.msg("更换头像成功！");
-        // $("#image").attr("src", dataURL);
+        // // $("#image").attr("src", dataURL);
+        // // console.log(dataURL);
+        // if (dataURL) {
+        //   /  // $("#image").attr("src", dataURL);
+        // }
         window.parent.getUserInfo();
       },
     });
