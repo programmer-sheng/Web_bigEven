@@ -42,13 +42,14 @@ var getUserInfo = () => {
 //渲染头像功能
 var rangeUserImage = (user) => {
   var uname = user.nickname || user.username;
-//   console.log(user.username);
+  //   console.log(user.username);
   $("#welcome").html(`欢迎  ${uname}`);
   if (user.user_pic !== null) {
     $(".text-avatar").hide();
     $(".layui-nav-img").attr("src", user.user_pic).show();
   } else {
-    let first = user.nickname[0].toUpperCase();
+    // console.log(nickname[0]);
+    let first = uname[0].toUpperCase();
     $(".layui-nav-img").hide();
     $(".text-avatar").html(first).show();
   }
